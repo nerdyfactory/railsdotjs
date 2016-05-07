@@ -5,7 +5,7 @@ Any suggestion of new features or bug reporting are appreciated.
 ## Requirements
 - [node.js](https://nodejs.org/)
 - [Ruby on Rails](http://rubyonrails.org/)
-- [redis](http://www.redis.io/): supporting messaging between rails and node application
+- [Redis](http://www.redis.io/): supporting messaging between rails and node application
 
 ## Installation
 Add the following to your application's Gemfile:
@@ -23,7 +23,7 @@ generating node working space
 $ rails g rails-dot-js:install
 ```
 
-now you can play with node stuff in app/rails-dot-js directory
+now you can play with node stuff in ```app/nodejs``` directory
 
 ## Usages
 
