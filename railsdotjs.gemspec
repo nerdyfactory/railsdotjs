@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'rails-dot-js'
+  s.name        = 'railsdotjs'
   s.version     = '0.0.1'
   s.date        = '2016-05-07'
   s.summary     = 'Node.js environment for Rails applications'
@@ -8,6 +8,8 @@ Gem::Specification.new do |s|
   s.email       = 'jonghun.yu@nerdyfactory.com'
   s.files       = Dir['lib/**/*']
   s.test_files  = Dir['test/**/*']
-  s.homepage    = 'https://github.com/nerdyfactory/rails-dot-js'
+  s.homepage    = 'https://github.com/nerdyfactory/railsdotjs'
   s.license 		= 'MIT'
+
+  s.add_dependency 'rails', '>= 3.2'
 end

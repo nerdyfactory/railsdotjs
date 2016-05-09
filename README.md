@@ -1,5 +1,5 @@
-# rails-dot-js
-rails-dot-js is gem providing node.js environment in Rails applications, so that you don't need to keep seperate repository for node application.
+# railsdotjs
+railsdotjs is gem providing node.js environment in Rails applications, so that you don't need to keep seperate repository for node application.
 Any suggestion of new features or bug reporting are appreciated.
 
 ## Requirements
@@ -10,7 +10,7 @@ Any suggestion of new features or bug reporting are appreciated.
 ## Installation
 Add the following to your application's Gemfile:
 ``` ruby
-gem 'rails-dot-js', :git => 'https://github.com/nerdyfactory/rails-dot-js'
+gem 'railsdotjs', :git => 'https://github.com/nerdyfactory/railsdotjs'
 ```
 
 and bundling application
@@ -20,7 +20,7 @@ $ bundle install
 
 generating node working space
 ```
-$ rails g rails-dot-js:install
+$ rails g rails_dot_js:install
 ```
 
 now you can play with node stuff in ```app/nodejs``` directory

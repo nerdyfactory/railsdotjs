@@ -1,4 +1,5 @@
 require 'rails/generators/active_record'
+
 module RailsDotJs
   module Generators
     class InstallGenerator < ActiveRecord::Generators::Base
@@ -15,10 +16,10 @@ module RailsDotJs
       end
 
       def add_node_modules_to_gitignore
-        append_to_file '.gitignore' do 
-					'app/nodejs/node_modules'
-					'app/nodejs/npm-debug.log'
-				end
+        #append_to_file '.gitignore' do 
+				#	'app/nodejs/node_modules'
+				#	'app/nodejs/npm-debug.log'
+				#end
       end
     end
   end
