@@ -3,7 +3,8 @@ require 'rails/generators/active_record'
 module RailsDotJs
   module Generators
     class InstallGenerator < ActiveRecord::Generators::Base
-      desc 'prepare node.js working environment'
+      desc 'prepare node.js working environment dfa'
+      argument :name, type: :string, default: ""
       source_root File.expand_path('../templates', __FILE__)
 
       def self.source_root
