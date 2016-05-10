@@ -11,5 +11,11 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/nerdyfactory/railsdotjs'
   s.license 		= 'MIT'
 
+  #dependency 
   s.add_dependency 'rails', '>= 3.2'
+  s.add_dependency 'redis', '>= 3.2'
+
+
+  #dev dependency 
+  s.add_development_dependency "rspec"
 end
