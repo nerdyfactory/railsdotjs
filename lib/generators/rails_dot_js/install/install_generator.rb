@@ -17,10 +17,9 @@ module RailsDotJs
       end
 
       def add_node_modules_to_gitignore
-        #append_to_file '.gitignore' do 
-				#	'app/nodejs/node_modules'
-				#	'app/nodejs/npm-debug.log'
-				#end
+        append_to_file '.gitignore' do
+          "\n" + %w[#railsdotjs app/nodejs/node_modules app/nodejs/npm-debug.log].join("\n") + "\n"
+        end
       end
     end
   end
