@@ -1,23 +1,10 @@
 module RailsDotJs
   module Execution
-    DEFAULT_OPTIONS = {
-      envs: {
-        NODE_ENV: ENV["RAILS_ENV"]
-      },
-      path: File.expand_path('app/nodejs')
-    }
-    def execute_script(file, options = default_options)
-      env_string = options[:envs].map do |k, v|
-        "#{k}=#{v}"
-      end.join(" ")
-      Dir.chdir(options[:path]) do
-        %x["#{["node", "#{options[:path]}/#{file}", env_string].join(" ")}"]
+    def execute_node(file)
+      Dir.chdir(fetch_config(:node_path)) do
+        node_cmd = ENV['NVM_BIN'] ? "#{ENV['NVM_BIN']}/node" : "node"
+        system "#{node_cmd} #{file}"
       end
-    end
-
-    private
-    def default_options
-      DEFAULT_OPTIONS
     end
   end
 end

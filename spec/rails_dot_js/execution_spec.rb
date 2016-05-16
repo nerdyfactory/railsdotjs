@@ -1,13 +1,15 @@
 RSpec.describe RailsDotJs::Execution do
   class MockClass
-    include RailsDotJs::Execution
+    include RailsDotJs
   end
 
   before(:each) do
     @klass = MockClass.new
   end
 
-  it "should return node scripts output" do
-		@klass.execute_script("test.js", path: File.expand_path(File.join(File.dirname(__FILE__), '../../fixtures')))
+  it "should return true when execute nod script" do
+    @klass.set_config(:node_path, [File.expand_path(File.dirname(__FILE__)), '/../fixtures'].join)
+		res = @klass.execute_node("test.js")
+    expect(res).to eq(true)
   end
 end
