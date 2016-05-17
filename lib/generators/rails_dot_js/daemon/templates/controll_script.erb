@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require 'daemons'
+
+#damons gem options, please refer http://www.rubydoc.info/gems/daemons/Daemons#run-class_method
+options = {
+  app_name: '<%= name.downcase %>',
+  dir_mode: :normal,
+  dir: 'tmp/pids',
+  multiple: false,
+  monitor: true,
+  log_dir: 'log',
+  log_output: true
+}
+
+Daemons.run 'script/<%= name.downcase %>', options

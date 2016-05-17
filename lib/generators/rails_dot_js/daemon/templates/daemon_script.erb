@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+<% class_name = name.downcase.classify %>
+require 'rubygems'
+require 'bundler/setup'
+require 'railsdotjs'
+
+class <%= class_name %>Runner
+  include RailsDotJs
+  def run
+    set_config(:node_path, "#{File.dirname __FILE__}/../app/nodejs")
+    ## it replace current process with the command executed so that it can be managed by daemons gem
+    # execute_node("someNodeScriptHere.js")
+  end
+end
+
+<%= class_name %>Runner.new.run

@@ -40,3 +40,5 @@ build/
 
 #mac temp files
 **/.DS_Store
+
+log/*

@@ -14,8 +14,10 @@ Gem::Specification.new do |s|
   #dependency 
   s.add_dependency 'rails', '>= 3.2'
   s.add_dependency 'redis', '>= 3.2'
+  s.add_dependency 'daemons'
 
 
   #dev dependency 
   s.add_development_dependency "rspec"
+  s.add_development_dependency "pry"
 end
