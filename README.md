@@ -80,11 +80,7 @@ DaemonNameRunner.new.run
 And you can start, stop and restart the daemon with following command
 ```
 $ bundle exec script/DAEMON_NAME_ctrl start
-```
-```
 $ bundle exec script/DAEMON_NAME_ctrl stop
-```
-```
 $ bundle exec script/DAEMON_NAME_ctrl restart
 ```
 
