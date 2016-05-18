@@ -7,7 +7,7 @@ module RailsDotJs
       end
     end
 
-    def damonize_node(file)
+    def daemonize_node(file)
       Dir.chdir(fetch_config(:node_path)) do
         exec("#{node_cmd} #{file}")
       end

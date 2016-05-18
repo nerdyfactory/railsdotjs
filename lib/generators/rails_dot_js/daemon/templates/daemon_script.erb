@@ -10,7 +10,7 @@ class <%= class_name %>Runner
   def run
     set_config(:node_path, "#{File.dirname __FILE__}/../app/nodejs")
     ## it replace current process with the command executed so that it can be managed by daemons gem
-    # execute_node("someNodeScriptHere.js")
+    # daemonize_node("someNodeScriptHere.js")
   end
 end
 

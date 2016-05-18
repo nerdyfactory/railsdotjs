@@ -57,7 +57,7 @@ To generate template, you can run following command
 It will create two scripts in ```script``` directory.
 ``` DAEMON_NAME_ctrl``` and ```DAEMON_NAME```
 
-The content of the script ```DAEMON_NAME``` should be like this. So you can specify your script from execute_node part.
+The content of the script ```DAEMON_NAME``` should be like this. you need to specify your script from ```daemonize_node``` part.
 ``` ruby
 #!/usr/bin/env ruby
 
@@ -71,7 +71,7 @@ class DaemonNameRunner
   def run
     set_config(:node_path, "#{File.dirname __FILE__}/../app/nodejs")
     ## it replace current process with the command executed so that it can be managed by daemons gem
-    # execute_node("test.js")
+    # daemonize_node("someNodeScriptHere.js")
   end
 end
 
