@@ -15,7 +15,8 @@ module RailsDotJs
 
     private
     def node_cmd
-      ENV['NVM_BIN'] ? "#{ENV['NVM_BIN']}/node" : "node"
+      node_env = fetch_config(:node_env)
+      ENV['NVM_BIN'] ? "NODE_ENV=#{node_env} #{ENV['NVM_BIN']}/node" : "NODE_ENV=#{node_env} node"
     end
   end
 end
