@@ -10,7 +10,7 @@ Any suggestion of new features or bug reporting are appreciated.
 ## Installation
 Add the following to your application's Gemfile:
 ``` ruby
-gem 'railsdotjs', :git => 'https://github.com/nerdyfactory/railsdotjs', :branch => 'master'
+gem 'railsdotjs'
 ```
 
 and bundling application
